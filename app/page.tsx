@@ -1,75 +1,4 @@
-type Project = {
-  number: string;
-  name: string;
-  category: string;
-  description: string;
-  tags: string[];
-  href: string;
-  visual: "health" | "review" | "chat" | "game" | "rag" | "skills";
-};
-
-const projects: Project[] = [
-  {
-    number: "01",
-    name: "OneLife",
-    category: "Healthcare platform · 2025",
-    description:
-      "A care coordination product for appointments, doctor workflows, payments, and online consultations, with role-aware access and AI-assisted support.",
-    tags: ["Node.js", "Express", "MongoDB", "Gemini", "AWS"],
-    href: "https://github.com/somilagrawal52/hospital-management",
-    visual: "health",
-  },
-  {
-    number: "02",
-    name: "CodeSage AI",
-    category: "Developer tools · 2026",
-    description:
-      "A pull-request review platform that turns bounded diffs into structured security, reliability, performance, and testing insights.",
-    tags: ["Next.js", "FastAPI", "PostgreSQL", "OpenAI"],
-    href: "https://github.com/somilagrawal52/AI-code-review",
-    visual: "review",
-  },
-  {
-    number: "03",
-    name: "Chat App",
-    category: "Real-time product · 2025",
-    description:
-      "A responsive messaging experience with live chat, media sharing, profiles, and JWT-backed sessions.",
-    tags: ["React", "Socket.IO", "MongoDB", "JWT"],
-    href: "https://github.com/somilagrawal52/Chat-APP",
-    visual: "chat",
-  },
-  {
-    number: "04",
-    name: "Connect Four",
-    category: "Real-time systems · 2026",
-    description:
-      "Multiplayer gameplay with matchmaking, bot fallback, reconnect support, persistent leaderboards, and Kafka event analytics.",
-    tags: ["Node.js", "Socket.IO", "Kafka", "MongoDB"],
-    href: "https://github.com/somilagrawal52/emitrr-backend-project",
-    visual: "game",
-  },
-  {
-    number: "05",
-    name: "Gemini RAG Q&A",
-    category: "Applied AI · 2025",
-    description:
-      "A grounded document Q&A system with session history, retries, query analytics, and database persistence.",
-    tags: ["Next.js", "Gemini", "Prisma", "Tailwind"],
-    href: "https://github.com/somilagrawal52/AI-Customer-Support-Bot-Specific-for-Solarpanel-Company-main",
-    visual: "rag",
-  },
-  {
-    number: "06",
-    name: "SkillSwap",
-    category: "Community platform · 2025",
-    description:
-      "A peer-learning hub for skill discovery, session booking, feedback, and role-based workflows.",
-    tags: ["React", "Express", "MongoDB", "Cloudinary"],
-    href: "https://github.com/somilagrawal52/skill-swap",
-    visual: "skills",
-  },
-];
+import { projects, type Project } from "./projects";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
@@ -85,6 +14,7 @@ export default function Home() {
           <a href="#work">Work</a>
           <a href="#about">About</a>
           <a href="#stack">Stack</a>
+          <a href="/Somil-Agrawal-Resume.pdf" target="_blank" rel="noreferrer">Résumé ↗</a>
         </nav>
         <a className="nav-cta" href="mailto:somilagrawal2004@gmail.com">
           Start a conversation <Arrow />
@@ -118,6 +48,7 @@ export default function Home() {
               >
                 GitHub <Arrow />
               </a>
+              <a className="button" href="/Somil-Agrawal-Resume.pdf" target="_blank" rel="noreferrer">Résumé PDF <Arrow /></a>
             </div>
           </div>
           <div
@@ -157,7 +88,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-meta">
-            <span>Available for internships &amp; full-time roles</span>
+            <span>Full-stack · Real-time · Applied AI</span>
             <span>
               Scroll to explore <b>↓</b>
             </span>
@@ -189,14 +120,7 @@ export default function Home() {
               at VIT
             </span>
           </div>
-          <div>
-            <strong>2026</strong>
-            <span>
-              CSE graduation
-              <br />
-              expected
-            </span>
-          </div>
+          <div><strong>45</strong><span>OneLife tests<br />passing locally</span></div>
         </section>
         <section id="work" className="work shell section">
           <div className="section-top">
@@ -208,9 +132,9 @@ export default function Home() {
                 to a working <em>system.</em>
               </h2>
               <p>
-                I make products across AI, real-time collaboration, healthcare,
-                and community. The common thread: useful software with a solid
-                backbone.
+                Six selected builds across healthcare, developer tools,
+                real-time systems, and community. Explore the engineering behind
+                each one.
               </p>
             </div>
           </div>
@@ -230,7 +154,7 @@ export default function Home() {
                 <em>intention.</em>
               </h2>
               <p>
-                I&apos;m Somil, a Computer Science student at VIT Bhopal who
+                I&apos;m Somil, with a computer science background at VIT Bhopal, who
                 enjoys turning product problems into dependable web systems. I
                 care as much about the invisible parts - data flow, auth,
                 architecture - as I do about the moment a user taps a button.
@@ -378,9 +302,8 @@ export default function Home() {
                   B.Tech, Computer Science Engineering <span>· VIT Bhopal</span>
                 </h3>
                 <p>
-                  Expected August 2026. CGPA: 8.05 / 10. A foundation in
-                  computer science backed by hands-on full-stack projects and
-                  consistent problem solving.
+                  CGPA: 8.05 / 10. A foundation in computer science backed by
+                  hands-on full-stack projects and consistent problem solving.
                 </p>
               </div>
               <a href="#top" aria-label="Back to the top">
@@ -416,6 +339,7 @@ export default function Home() {
                 LinkedIn <Arrow />
               </a>
               <a href="#top">Back to top ↑</a>
+              <a href="/Somil-Agrawal-Resume.pdf" target="_blank" rel="noreferrer">Résumé PDF <Arrow /></a>
             </div>
           </div>
         </section>
@@ -434,6 +358,7 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="project-art">
         <ProjectArt type={project.visual} />
         <span className="project-no">{project.number}</span>
+        <span className="concept-label">Illustrative visual</span>
       </div>
       <div className="project-body">
         <p className="project-category">{project.category}</p>
@@ -444,14 +369,7 @@ function ProjectCard({ project }: { project: Project }) {
             <li key={tag}>{tag}</li>
           ))}
         </ul>
-        <a
-          className="project-link"
-          href={project.href}
-          target="_blank"
-          rel="noreferrer"
-        >
-          View project <Arrow />
-        </a>
+        <div className="project-actions"><a className="project-link" href={`/work/${project.slug}/`}>Read case study <Arrow /></a><a className="source-link" href={project.href} target="_blank" rel="noreferrer">Source code <Arrow /></a></div>
       </div>
     </article>
   );
@@ -501,7 +419,7 @@ function ProjectArt({ type }: { type: Project["visual"] }) {
         <div className="review-score">
           <small>CODE HEALTH</small>
           <strong>92</strong>
-          <span>+8 this week</span>
+          <span>Example score</span>
         </div>
       </div>
     );
@@ -551,7 +469,7 @@ function ProjectArt({ type }: { type: Project["visual"] }) {
     return (
       <div className="rag-art">
         <div className="rag-title">
-          <i /> Ask Atlas <span>AI assistant</span>
+          <i /> Gemini Q&amp;A <span>AI assistant</span>
         </div>
         <div className="prompt">What is the warranty policy?</div>
         <div className="answer">

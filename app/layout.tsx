@@ -11,7 +11,9 @@ export const metadata: Metadata = {
     title: "Somil Agrawal — Full-stack Software Engineer",
     description: "From the interface people remember to the systems they rely on.",
     type: "website",
+    images: [{ url: "/og-card.png", width: 1200, height: 630, alt: "Somil Agrawal — I build the whole thing." }],
   },
+  twitter: { card: "summary_large_image", images: ["/og-card.png"] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

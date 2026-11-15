@@ -6,7 +6,7 @@ export type Project = {
   description: string;
   tags: string[];
   href: string;
-  visual: "health" | "review" | "chat" | "game" | "rag" | "skills";
+  visual: "health" | "review" | "chat" | "game" | "rag" | "skills" | "rental";
   focus: string;
   overview: string;
   built: string[];
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     name: "CodeSage AI",
     category: "Developer tools · 2026",
     description: "Structured pull-request feedback across security, bugs, performance, maintainability, and tests.",
-    tags: ["Next.js", "FastAPI", "PostgreSQL", "OpenAI"],
+    tags: ["Next.js", "FastAPI", "SQLite / PostgreSQL", "OpenAI"],
     href: "https://github.com/somilagrawal52/AI-code-review",
     visual: "review",
     focus: "Make AI code review explainable and useful inside a developer workflow.",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     overview: "The chat product uses a React client, Express API, MongoDB persistence, and Socket.IO events for direct messaging. Its documented local work also covers richer conversation tools and optional AI assistance.",
     built: ["Authenticated profiles and message history with real-time delivery.", "Media handling through Cloudinary and responsive conversation layouts.", "Socket-driven online state and message updates."],
     decisions: ["The README calls out that Socket.IO needs a long-running backend; a serverless API alone cannot guarantee durable connections.", "Optional AI suggestions require a clear consent step because message text is sent to the model provider."],
-    status: "Some newer conversation features are still uncommitted locally. This case study describes the published core and does not claim a deployed live demo.",
+    status: "The linked repository covers the core messaging experience. No public live demo is currently linked.",
   },
   {
     slug: "skill-swap",
@@ -76,8 +76,23 @@ export const projects: Project[] = [
     status: "The updated repository is under Somil’s GitHub account. Its API and swap lifecycle tests and frontend build pass locally.",
   },
   {
-    slug: "connect-four",
+    slug: "driveluxe",
     number: "05",
+    name: "DriveLuxe",
+    category: "Booking platform · 2026",
+    description: "A car rental experience connecting vehicle discovery, authenticated booking, and fleet management.",
+    tags: ["React", "Redux Toolkit", "Express", "MongoDB"],
+    href: "https://github.com/somilagrawal52/Car-Rental-App",
+    visual: "rental",
+    focus: "Make the path from browsing a vehicle to managing a reservation feel simple.",
+    overview: "DriveLuxe pairs a React storefront with an Express and MongoDB service. Visitors can explore cars and details, while authenticated flows handle bookings, profiles, and fleet administration.",
+    built: ["Vehicle catalog and detail pages, account screens, and booking interface.", "Booking APIs that validate date ranges and calculate the total on the server.", "Administrative car and reservation routes with role checks."],
+    decisions: ["The server calculates booking cost from the selected dates and vehicle price rather than trusting a client total.", "Booking details are checked against the current user before being returned.", "Redux Toolkit keeps shared catalog state organized across the React views."],
+    status: "The frontend builds locally and the source is public. A hosted end-to-end demo has not been verified.",
+  },
+  {
+    slug: "connect-four",
+    number: "06",
     name: "Connect Four",
     category: "Real-time systems · 2026",
     description: "Multiplayer gameplay with matchmaking, bot fallback, reconnect support, and event analytics.",
@@ -92,7 +107,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gemini-rag",
-    number: "06",
+    number: "07",
     name: "Gemini RAG Q&A",
     category: "Applied AI · 2025",
     description: "Document-grounded question answering with session history and query analytics.",
@@ -103,7 +118,7 @@ export const projects: Project[] = [
     overview: "A Next.js and Prisma application that stores document chunks, sessions, questions, context, answers, and processing time. Gemini extracts relevant context and generates a response from it.",
     built: ["Document loading and query APIs with persisted session history.", "Context grounding, retry logic, and error tracking.", "Analytics views for unanswered questions and feedback."],
     decisions: ["The model key remains on the server side of the application.", "The system records context alongside responses so results can be inspected and improved."],
-    status: "The repository contains a development database and has no verified hosted demo. It is presented here as a project, not a production support system.",
+    status: "The source is available, but no hosted demo has been verified. Provider configuration and content evaluation would be needed before real support use.",
   },
 ];
 

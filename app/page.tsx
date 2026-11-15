@@ -2,6 +2,20 @@ import { projects, type Project } from "./projects";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
 
+const moreWork = [
+  { name: "Food App", kind: "Commerce / full-stack", summary: "Restaurant discovery, cart, ordering, and vendor management.", stack: "React · Express · MongoDB", href: "https://github.com/somilagrawal52/Food-APP" },
+  { name: "Clinical Risk Screening", kind: "Machine learning / prototype", summary: "Educational screening dashboard and FastAPI prediction endpoints.", stack: "Python · FastAPI · scikit-learn", href: "https://github.com/somilagrawal52/disease-detection" },
+  { name: "Hospital Management React", kind: "Healthcare / earlier build", summary: "A separate React-based patient, doctor, and admin experience.", stack: "React · Node.js · MongoDB", href: "https://github.com/somilagrawal52/Hospital-Management-react-version" },
+  { name: "AI Mock Interviews", kind: "Learning build / voice AI", summary: "Interview practice interface exploring voice interaction and feedback.", stack: "Next.js · Firebase · Vapi", href: "https://github.com/somilagrawal52/ai_mock_interviews-main" },
+];
+
+const stackGroups = [
+  { title: "01 / Interfaces", lead: "The part people touch.", items: ["React", "Next.js", "JavaScript", "TypeScript", "Tailwind CSS", "HTML / CSS", "Redux Toolkit"], proof: [{ label: "DriveLuxe", href: "/work/driveluxe/" }, { label: "CodeSage", href: "/work/codesage-ai/" }, { label: "Chat App", href: "/work/chat-app/" }] },
+  { title: "02 / Systems", lead: "The parts that hold up.", items: ["Node.js", "Express", "FastAPI", "REST APIs", "JWT", "Socket.IO", "Kafka"], proof: [{ label: "OneLife", href: "/work/onelife/" }, { label: "Connect Four", href: "/work/connect-four/" }, { label: "SkillSwap", href: "/work/skill-swap/" }] },
+  { title: "03 / Data + AI", lead: "From records to useful answers.", items: ["MongoDB", "PostgreSQL", "MySQL", "SQL", "Prisma", "Gemini", "OpenAI", "NLP integration"], proof: [{ label: "Gemini RAG", href: "/work/gemini-rag/" }, { label: "CodeSage", href: "/work/codesage-ai/" }, { label: "OneLife", href: "/work/onelife/" }] },
+  { title: "04 / Delivery", lead: "Getting it into the world.", items: ["AWS", "Docker", "CI / CD", "Render", "Git / GitHub", "Web scraping", "C / C++"], proof: [{ label: "OneLife", href: "/work/onelife/" }, { label: "Résumé", href: "/Somil-Agrawal-Resume.pdf" }] },
+];
+
 export default function Home() {
   return (
     <>
@@ -14,88 +28,53 @@ export default function Home() {
           <a href="#work">Work</a>
           <a href="#about">About</a>
           <a href="#stack">Stack</a>
-          <a href="/Somil-Agrawal-Resume.pdf" target="_blank" rel="noreferrer">Résumé ↗</a>
+          <a href="#experience">Experience</a>
+          <a href="/Somil-Agrawal-Resume.pdf" target="_blank" rel="noreferrer">Résumé <Arrow /></a>
         </nav>
         <a className="nav-cta" href="mailto:somilagrawal2004@gmail.com">
-          Start a conversation <Arrow />
+          Let&apos;s talk <Arrow />
         </a>
       </header>
       <main id="top">
         <section className="hero shell">
           <div className="hero-intro">
-            <p className="kicker">
-              <i /> Software engineer · Bhopal, India
-            </p>
+            <p className="kicker"><i /> Somil Agrawal / Full-stack software engineer</p>
             <h1>
-              I build digital
+              I build the
               <br />
-              products that <em>move.</em>
+              <em>whole thing.</em>
             </h1>
             <p className="hero-copy">
-              Full-stack engineer focused on the parts that make a product feel
-              alive: dependable APIs, real-time flows, thoughtful interfaces,
-              and practical AI.
+              From the interface people remember to the systems they rely on.
+              I build web products across frontend, APIs, data, real-time flows,
+              and applied AI.
             </p>
             <div className="hero-actions">
               <a className="button button-fill" href="#work">
-                See selected work <span>↓</span>
-              </a>
-              <a
-                className="button"
-                href="https://github.com/somilagrawal52"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub <Arrow />
+                Explore the work <span>↓</span>
               </a>
               <a className="button" href="/Somil-Agrawal-Resume.pdf" target="_blank" rel="noreferrer">Résumé PDF <Arrow /></a>
             </div>
+            <div className="hero-caption"><span>VIT BHOPAL / COMPUTER SCIENCE</span><span>BUILDING ACROSS THE STACK</span></div>
           </div>
-          <div
-            className="hero-visual"
-            aria-label="A visual summary of Somil's engineering focus"
-          >
-            <div className="visual-label">
-              NOW BUILDING <span>▣</span>
-            </div>
-            <div className="orbital orbital-one" />
-            <div className="orbital orbital-two" />
-            <div className="signal">
-              <b>001</b>
-              <span>ideas into interfaces</span>
-              <i />
-            </div>
-            <div className="signal signal-bottom">
-              <b>002</b>
-              <span>systems that respond</span>
-              <i />
-            </div>
-            <div className="hero-card">
-              <div className="card-dots">
-                <i />
-                <i />
-                <i />
-              </div>
-              <code>
-                const product = <em>intent</em>
-                <br />
-                &nbsp;&nbsp;.map(<em>experience</em>)<br />
-                &nbsp;&nbsp;.ship(<em>withCare</em>)
-              </code>
-              <small>
-                STATUS <strong>IN MOTION</strong>
-              </small>
-            </div>
+          <div className="hero-visual" role="img" aria-label="Illustration of a connected interface, API, and data system">
+            <div className="visual-label">THE BUILD / 001 <span>● LIVE SYSTEM</span></div>
+            <div className="hero-orbit hero-orbit-one" />
+            <div className="hero-orbit hero-orbit-two" />
+            <div className="hero-core"><span>FULL</span><strong>STACK</strong><small>IDEA → INTERFACE → INFRASTRUCTURE</small></div>
+            <div className="flow-chip flow-chip-ui"><span>01 / INTERFACE</span><strong>React + Next.js</strong></div>
+            <div className="flow-chip flow-chip-api"><span>02 / SERVICE</span><strong>Node + FastAPI</strong></div>
+            <div className="flow-chip flow-chip-data"><span>03 / DATA</span><strong>MongoDB + SQL</strong></div>
+            <span className="hero-coordinate">23.26° N &nbsp; 77.41° E</span>
           </div>
           <div className="hero-meta">
-            <span>Full-stack · Real-time · Applied AI</span>
-            <span>
-              Scroll to explore <b>↓</b>
-            </span>
+            <span>Selected work / 2025—26</span>
+            <span>Scroll to explore <b>↓</b></span>
           </div>
         </section>
+        <div className="ticker" aria-hidden="true"><div>PRODUCT THINKING <b>✳</b> ENGINEERING DEPTH <b>✳</b> REAL-TIME SYSTEMS <b>✳</b> PRODUCT THINKING <b>✳</b> ENGINEERING DEPTH <b>✳</b> REAL-TIME SYSTEMS <b>✳</b></div></div>
         <section className="proof shell" aria-label="Highlights">
-          <p>THE SHORT VERSION</p>
+          <p>IN THE DETAILS</p>
           <div>
             <strong>20+</strong>
             <span>
@@ -124,17 +103,16 @@ export default function Home() {
         </section>
         <section id="work" className="work shell section">
           <div className="section-top">
-            <p className="kicker">01 / Selected work</p>
+            <p className="kicker">01 / Featured builds</p>
             <div>
               <h2>
-                From a good idea
+                Proof is in
                 <br />
-                to a working <em>system.</em>
+                the <em>build.</em>
               </h2>
               <p>
-                Six selected builds across healthcare, developer tools,
-                real-time systems, and community. Explore the engineering behind
-                each one.
+                Seven deeper case studies spanning healthcare, developer tools,
+                messaging, marketplaces, booking, games, and document AI.
               </p>
             </div>
           </div>
@@ -144,14 +122,19 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <section className="archive shell section" aria-labelledby="archive-heading">
+          <div className="archive-head"><p className="kicker">02 / Project archive</p><div><h2 id="archive-heading">More things <em>I&apos;ve built.</em></h2><p>Additional builds and explorations. The full repository list lives on GitHub.</p></div></div>
+          <div className="archive-list">{moreWork.map((item, index) => <a key={item.name} href={item.href} target="_blank" rel="noreferrer" className="archive-row"><span className="archive-num">{String(index + 8).padStart(2, "0")}</span><span className="archive-name"><strong>{item.name}</strong><small>{item.kind}</small></span><span className="archive-summary">{item.summary}</span><span className="archive-stack">{item.stack}</span><span className="archive-arrow" aria-hidden="true">↗</span></a>)}</div>
+          <a className="archive-all" href="https://github.com/somilagrawal52?tab=repositories" target="_blank" rel="noreferrer">Browse all repositories <Arrow /></a>
+        </section>
         <section id="about" className="about section">
           <div className="shell about-grid">
-            <p className="kicker">02 / How I think</p>
+            <p className="kicker">03 / The approach</p>
             <div className="about-copy">
               <h2>
-                Built with
+                Curious about
                 <br />
-                <em>intention.</em>
+                the <em>whole system.</em>
               </h2>
               <p>
                 I&apos;m Somil, with a computer science background at VIT Bhopal, who
@@ -162,8 +145,8 @@ export default function Home() {
               <p>
                 At Birlasoft, I developed and tested REST and real-time APIs,
                 improving response efficiency through query optimization and
-                focused middleware work. Outside class, I&apos;ve kept a 100-day
-                public coding streak and solved 700+ DSA problems.
+                focused middleware work. I&apos;ve also completed a 100-day public
+                coding challenge and solved 700+ DSA problems.
               </p>
               <a
                 className="inline-link"
@@ -200,76 +183,35 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="stack" className="stack shell section">
+        <section id="stack" className="stack section">
+          <div className="shell">
           <div className="section-top">
-            <p className="kicker">03 / Toolkit</p>
+            <p className="kicker">04 / The toolkit</p>
             <div>
               <h2>
-                The tools behind
+                Stack, with
                 <br />
-                the <em>work.</em>
+                <em>receipts.</em>
               </h2>
               <p>
-                A practical stack shaped by the systems above and the work I
-                enjoy doing next.
+                Drawn from the repositories above and my résumé. Each category
+                connects to work where those skills show up.
               </p>
             </div>
           </div>
           <div className="stack-grid">
-            <StackGroup
-              title="Frontend"
-              items={[
-                "React",
-                "Next.js",
-                "JavaScript",
-                "TypeScript",
-                "Tailwind CSS",
-                "HTML / CSS",
-              ]}
-            />
-            <StackGroup
-              title="Backend & Data"
-              items={[
-                "Node.js",
-                "Express",
-                "FastAPI",
-                "MongoDB",
-                "PostgreSQL",
-                "MySQL",
-              ]}
-            />
-            <StackGroup
-              title="AI & Real-time"
-              items={[
-                "OpenAI",
-                "Gemini",
-                "Socket.IO",
-                "Kafka",
-                "Web Scraping",
-                "REST APIs",
-              ]}
-            />
-            <StackGroup
-              title="Cloud & Craft"
-              items={[
-                "AWS",
-                "Docker",
-                "CI / CD",
-                "Git / GitHub",
-                "Render",
-                "JWT Auth",
-              ]}
-            />
+            {stackGroups.map((group) => <StackGroup key={group.title} {...group} />)}
+          </div>
           </div>
         </section>
-        <section className="experience shell section">
+        <section id="experience" className="experience shell section">
           <div className="section-top">
-            <p className="kicker">04 / Experience</p>
+            <p className="kicker">05 / Experience</p>
             <div>
               <h2>
-                Learning in
+                Shaped by
                 <br />
-                the <em>real world.</em>
+                <em>real work.</em>
               </h2>
             </div>
           </div>
@@ -296,7 +238,7 @@ export default function Home() {
               </a>
             </article>
             <article>
-              <p>2022 — 2026</p>
+              <p>COMPUTER SCIENCE</p>
               <div>
                 <h3>
                   B.Tech, Computer Science Engineering <span>· VIT Bhopal</span>
@@ -314,11 +256,11 @@ export default function Home() {
         </section>
         <section className="contact">
           <div className="shell contact-inner">
-            <p className="kicker">05 / Contact</p>
+            <p className="kicker">06 / Contact</p>
             <h2>
-              Let&apos;s make the next
+              Have a problem
               <br />
-              thing <em>count.</em>
+              worth <em>building?</em>
             </h2>
             <a className="email" href="mailto:somilagrawal2004@gmail.com">
               somilagrawal2004@gmail.com <Arrow />
@@ -346,7 +288,7 @@ export default function Home() {
       </main>
       <footer className="shell">
         <span>© 2026 Somil Agrawal</span>
-        <span>Designed and built with intent.</span>
+        <span>Designed and built by Somil.</span>
       </footer>
     </>
   );
@@ -376,6 +318,14 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 function ProjectArt({ type }: { type: Project["visual"] }) {
+  if (type === "rental")
+    return (
+      <div className="rental-art">
+        <div className="rental-top"><strong>DRIVE<span>LUXE</span></strong><small>YOUR NEXT ROAD STARTS HERE ↗</small></div>
+        <div className="rental-stage"><div className="car-shape"><i className="car-roof" /><i className="car-wheel car-wheel-one" /><i className="car-wheel car-wheel-two" /></div></div>
+        <div className="rental-bottom"><span>01 / SELECT A VEHICLE</span><b>Find your drive.</b><span>EXPLORE THE FLEET →</span></div>
+      </div>
+    );
   if (type === "health")
     return (
       <div className="health-art">
@@ -505,15 +455,17 @@ function ProjectArt({ type }: { type: Project["visual"] }) {
   );
 }
 
-function StackGroup({ title, items }: { title: string; items: string[] }) {
+function StackGroup({ title, lead, items, proof }: { title: string; lead: string; items: string[]; proof: { label: string; href: string }[] }) {
   return (
     <article>
-      <h3>{title}</h3>
+      <p className="stack-index">{title}</p>
+      <h3>{lead}</h3>
       <ul>
         {items.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
+      <p className="stack-proof">IN THE WORK <span>{proof.map((item) => <a key={item.href + item.label} href={item.href}>{item.label} ↗</a>)}</span></p>
     </article>
   );
 }
